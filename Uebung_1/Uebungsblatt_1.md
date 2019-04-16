@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
 
 using namespace std;
 
-bool schaltjahr short jahr);
+bool schaltjahr (short jahr);
 
 bool schaltjahr (short jahr) {
   if ((jahr % 4 == 0 && jahr % 100 != 0) || jahr % 400 == 0)
