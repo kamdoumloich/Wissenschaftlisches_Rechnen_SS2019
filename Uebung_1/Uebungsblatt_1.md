@@ -1,7 +1,6 @@
-##LOICH KAMDOUM DEAMENI
-##MAT-Nr: 506520
+## LOICH KAMDOUM DEAMENI. MAT-Nr: 506520
 
-# Uebung 1
+## Uebung 1
 
 ```c++
 
@@ -13,9 +12,8 @@ int fakultaet(int nummer);
 
 int fakultaet(int nummer)
 {
-  if (nummer == 0) {
+  if (nummer == 0)
     return 1;
-  }
   else
     return nummer * fakultaet(nummer - 1);
 }
@@ -29,13 +27,11 @@ int main(int argc, char const *argv[])
 
       std::cout <<nummer <<"! = "<<fakultaet(nummer)<<endl;
     }
-
     return 0;
 }
-
 ```
 
-# Uebung 2
+## Uebung 2
 
 ```c++
 
@@ -43,12 +39,13 @@ int main(int argc, char const *argv[])
 
 using namespace std;
 
+bool schaltjahr short jahr);
+
 bool schaltjahr (short jahr) {
-  if ((jahr % 4 == 0 && jahr % 100 != 0) || jahr % 400 == 0) {
+  if ((jahr % 4 == 0 && jahr % 100 != 0) || jahr % 400 == 0)
     return true;
-  } else {
+  else
     return false;
-  }
 }
 
 int main(int argc, char const *argv[]) {
@@ -59,13 +56,11 @@ int main(int argc, char const *argv[]) {
     cout << "Geben Sie ein Jahr ein: ";
     cin >> jahr;
 
-    if (schaltjahr(jahr)) {
+    if (schaltjahr(jahr))
       std::cout <<jahr <<" ist ein schaltjahr" << '\n';
-    } else {
+    else
       std::cout <<jahr <<" ist kein schaltjahr" << '\n';
-    }
   }
-
   return 0;
 }
 
