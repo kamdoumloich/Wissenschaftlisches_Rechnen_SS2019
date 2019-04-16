@@ -1,5 +1,4 @@
 #include <iostream>
-#include <typeinfo>
 
 using namespace std;
 
@@ -16,18 +15,12 @@ int fakultaet(int nummer)
 
 int main(int argc, char const *argv[])
 {
-    short nummer = 0;
+    short nummer = 1;
+    while (nummer > 0) {
+      std::cout << "Geben Sie eine Nummer ein: ";
+      std::cin >> nummer;
 
-    while (typeid(nummer).name() == "short") {
-      if (nummer > 0) {
-        cout << "Geben Sie eine Nummer ein: ";
-        cin >> nummer;
-
-        std::cout << "Ergebnis "<<nummer <<"! = "<<fakultaet(nummer)<<endl;
-      }
-      else {
-        break;
-      }
+      std::cout <<nummer <<"! = "<<fakultaet(nummer)<<endl;
     }
 
     return 0;
