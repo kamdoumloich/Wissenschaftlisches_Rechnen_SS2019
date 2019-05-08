@@ -26,6 +26,10 @@ public:
     void insert (Node *n, int i);
     void erase (Node *n);
 
+    const Node* findMin() const;
+    const Node* findMax() const;
+    void testListMinMax();
+
 };
 
 

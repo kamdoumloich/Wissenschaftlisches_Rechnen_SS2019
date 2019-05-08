@@ -110,3 +110,42 @@ void List::erase (Node *n)
         node_tmp->next = nullptr;
     }
 }
+
+const Node* List::findMin() const
+{
+    Node *node_tmp = first_;
+    Node *min_node = first_;
+    Node *next_node = new Node();
+
+    while(node_tmp->next != nullptr)
+    {
+        next_node = next(node_tmp);
+        node_tmp = next_node;
+        if(node_tmp->value < min_node->value)
+            min_node = node_tmp;
+    }
+    return min_node;
+}
+
+const Node* List::findMax() const
+{
+    Node *node_tmp = first_;
+    Node *max_node = first_;
+    Node *next_node = new Node();
+
+    while(node_tmp->next != nullptr)
+    {
+        next_node = next(node_tmp);
+        node_tmp = next_node;
+        if(node_tmp->value > max_node->value)
+            max_node = node_tmp;
+    }
+    return max_node;
+}
+
+void List::testListMinMax()
+{
+    cout <<'\n'<<"Der min in der Liste ist: "<< this->findMin()->value;
+    cout <<'\n'<<"Der max in der Liste ist: "<< this->findMax()->value;
+    cout <<endl;
+}

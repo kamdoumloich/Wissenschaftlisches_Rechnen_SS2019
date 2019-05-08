@@ -31,8 +31,7 @@ p + 1 -> nicht korrekt
 
 3. 
 a) Die beide haben keinen Wert
-b) 
-
+b) In der erste Aufruf das Objekt existiert nicht mehr, der Zeiger schon, deswegen bei Zugriff folgt ein segmentation fault. Das ist besonders gefährlich wenn mehrere Zeiger auf dasselbe Objekt existieren.
 
 Übung 4: Vekettete Liste
 1) der Pointer zeigt im Moment nicht auf eine Variable/Funktion und zeigt nicht auf irgendwelche Adresse in Heap.
@@ -40,3 +39,10 @@ b)
 2) Der Kode steht unten
 
 5) Wenn mann die Liste Kopiert, wird die Liste richtig kopiert. Das ist möglich dank des Konstruktor und Zuweisungsoperator "=".
+
+Übung 5: Verkettete Liste (min/max)
+1.
+- gute Testfälle: Die liste ist Aufsteigend geordnet.
+- Seiteneffekte: Die liste ist leer.
+
+3. Wir mussen static Variable und Zeiger benutzen. Das führt dazu, dass die Methoden auch als static definiert werden müssen.
