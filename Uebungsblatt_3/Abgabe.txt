@@ -1,0 +1,42 @@
+LOICH KAMDOUM DEAMENI
+Mat-Nr: 506520
+
+Uebungsblatt 3:
+
+Übung 1: Pointer
+
+i + 1 -> korrekt (int)
+*p -> korrekt (int)
+*p + 3 -> korrekt (int)
+&i == p -> korrekt (bool)
+i == *p -> korrekt (bool)
+&p -> korrekt ()
+p + 1 -> nicht korrekt
+&p == i -> nicht korrekt
+**(&p) -> korrekt (int)
+*p + i > 1 -> korrekt (bool)
+
+
+Übung 2: Destruktor
+* alle Objekte der Klasse C wegzuräumen -> richtig
+* Objekte der Klasse C im Heap wegzuräumen -> richtig
+* alle Komponenten von Objekten der Klasse C wegzuräumen -> richtig
+* Komponenten von Objekten der Klasse C , die im Heap liegen, wegzuräumen -> falsch
+
+
+Übung 3: new & delete
+1. Große Objekte oder Felder deren Größe erst zur Laufzeit bekannt sind, können mit Hilfe von new auf dem Heap alloziert werden. Hier ist der Wert von int noch nicht festgelegt.
+
+2. nein
+
+3. 
+a) Die beide haben keinen Wert
+b) 
+
+
+Übung 4: Vekettete Liste
+1) der Pointer zeigt im Moment nicht auf eine Variable/Funktion und zeigt nicht auf irgendwelche Adresse in Heap.
+
+2) Der Kode steht unten
+
+5) Wenn mann die Liste Kopiert, wird die Liste richtig kopiert. Das ist möglich dank des Konstruktor und Zuweisungsoperator "=".
