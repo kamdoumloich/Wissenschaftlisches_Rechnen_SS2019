@@ -1,0 +1,18 @@
+LOICH KAMDOUM DEAMENI
+Mat-Nr: 506520
+
+Uebungsblatt 4:
+
+
+Übung 4: Constness
+p = &i; => ist nicht zulässig, da p ein leser Pointer ist. Durch den Bedehl "const" wird es verboten, die Adresse die in dem Pointer "p" gespeichert zu ändern.
+bar(l); => ist nicht zulässig, da die Funktion "int bar(int &)" wartet auf eine Variable mit dem Typ "int &", aber "l" has den Typ "const int". Also "l" ist als konstant Referenz definiert. Der Wert auf den die Referenz verweist kann dann (mit Hilfe der Referenz) nicht geändert werden.
+
+
+Übung 3: Knobelaufgabe
+The reason the conversion from "int** → const int**" is dangerous is that it would let silently and accidentally modify a "const int" object without a cast. The correct answer should be simply change "const int** to const int* const*".
+
+
+Übung 2:shared_ptr und weak_ptr
+
+
