@@ -1,14 +1,14 @@
 #ifndef TRAPEZREGEL_H
 #define TRAPEZREGEL_H
 
-#include <cmath>
+#include <math.h>
 
 #include "quadraturregel.h"
 
 class Trapezregel : public Quadraturregel
 {
 private:
-    double qTrapez(Funktor &f, double a_, double b_);
+    double qTrapez(Funktor &, double, double);
 
 public:
     //Variable
@@ -16,9 +16,9 @@ public:
     int size;
 
     //Funktionen
-    Trapezregel(double a_, double b_, int size_);
+    Trapezregel(double, double, int);
     ~Trapezregel();
-    double operator() (Funktor &f) override;
+    double operator() (Funktor &) override;
 };
 
 #endif // TRAPEZREGEL_H

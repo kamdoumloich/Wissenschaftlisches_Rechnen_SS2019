@@ -6,7 +6,7 @@
 class Quadraturregel
 {
 public:
-    virtual double operator () (Funktor &f) = 0;
+    virtual double operator () (Funktor &) = 0;
 };
 
 #endif // QUADRATURREGEL_H

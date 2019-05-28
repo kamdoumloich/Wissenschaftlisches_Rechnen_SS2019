@@ -1,7 +1,7 @@
 #ifndef T_QUADRAT_H
 #define T_QUADRAT_H
 
-#include <cmath>
+#include <math.h>
 
 #include "testfunktion.h"
 #include "funktor.h"
@@ -18,10 +18,10 @@ public:
     T_Quadrat() = default;
     T_Quadrat(double, double);
 
-    double operator () (double t) override;
+    double operator () (double) override;
 
     void integrationIntegration(double &, double &) const;
-    virtual double exactIntegral() const = 0; 
+    double exactIntegral() const override; 
 };
 
 #endif // T_QUADRAT_H

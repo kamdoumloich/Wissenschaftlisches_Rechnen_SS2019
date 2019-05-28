@@ -1,7 +1,7 @@
 #ifndef SIMPSONREGEL_H
 #define SIMPSONREGEL_H
 
-#include <cmath>
+#include <math.h>
 
 #include "quadraturregel.h"
 

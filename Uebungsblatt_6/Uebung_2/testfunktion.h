@@ -1,7 +1,7 @@
 #ifndef TESTFUNKTIONCLASS_H
 #define TESTFUNKTIONCLASS_H
 
-#include <cmath>
+#include <math.h>
 
 #include "quadraturregel.h"
 #include "funktor.h"
