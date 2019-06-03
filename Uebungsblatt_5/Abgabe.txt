@@ -1,0 +1,53 @@
+Ubung 1
+
+1)
+Size of Empty -> 1
+Size of EmptyDerived -> 1
+Size of NonEmpty -> 1
+
+2)
+- Wenn Empty keinen speicherplatz beansprüchen würde, dann hätten alle Objekte von der Klasse die gleiche Adresse im Speicher
+- Im diesem Fall hätten c.a und c.b die gleiche Sprecheradressen.
+
+3)
+Size of Object Composite -> 8
+Size of c.a -> 1
+Size of c.b -> 4
+
+4)
+Size of Object CompositeChar -> 2
+Size of c.a -> 1
+Size of c.b -> 1
+
+Size of Object CompositeLong -> 16
+Size of c.a -> 1
+Size of c.b -> 8
+
+sizeof() returns the size, in bytes of an object. Die obigen Ergebnisse lassen sich erklären in sofern, dass die Grösse des Objekts die Grösse der Summe von alle seine Attribute gleich. Die Grösse eine Variable char (oder long long) ist 1 (oder 8) Byte in c++. In dem letzten Fall (long long) hätte die Grösse 9 sein gewesen, aber zur Optimierung der Speicher wird 8+8 in Spreicher reserviert. 
+
+
+Übung 2 Vererbung und Komposition
+
+
+Übung 3 Vererbung und Funktionen
+1) 
+Funktioniert nicht, weil C auf A nicht zugegriffen kann, da die Vererbung von B privat ist. Es wird versucht über die Funktion test() auf die Methode A::foo() zuzugreifen, da diese nicht in C definiert ist.
+
+Zur Lösung muss die Vererbung in der Klasse C von B in "public" umgewandelt werden.
+
+Dann kriegen wir im Ausgabe:
+A::foo
+B::foo
+A::foo
+B::foo
+A::foo
+
+Erklärung:
+Zeile 1: foo() ist eine Funktion der Klasse A.
+Zeile 2: B hat seine eigene Funktion foo(), deswegen wird seine aufgeruft und nicht die von A.
+Zeile 3: B hat seine eigene Funktion foo(), aber der Parameter wird in ein Objekt der Klasse A umgewandelt, deswegen wird die Funktion foo() von A aufgeruft.
+Zeile 4: C hat eine Funktion foo(), aber die Funktion test() benutzt ein Objekt von A, So die Funktion A::foo() wird durch die Vererbung (public) von B erreicht.
+
+
+Übung 5 Exceptions und Sanity Checks
+

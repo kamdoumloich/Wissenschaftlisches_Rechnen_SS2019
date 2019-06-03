@@ -1,0 +1,4 @@
+Ubung 1
+
+1) Das Programm ruft die zwei Klasse unteraneinder an. Zuerst wird die Klasse P angerufen, dann wird diese Klasse (Wenn es keinen Fehler gibt) die Klasse Ball anrufen.
+
