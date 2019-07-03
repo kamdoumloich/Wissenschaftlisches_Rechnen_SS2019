@@ -1,4 +1,5 @@
 #include "num_matrix.h"
+#include "matrix_double.h"
 #include <iostream>
 #include <cstdlib>
 
