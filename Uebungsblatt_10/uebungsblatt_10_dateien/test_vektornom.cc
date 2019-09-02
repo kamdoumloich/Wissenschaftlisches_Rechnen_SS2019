@@ -4,9 +4,9 @@
 #include <cmath>
 
 template<typename T>
-void norm_sqrt(const T& elt)
+float norm_sqrt(const T& elt)
 {
-  std::cout << "||A||2 = " << std::sqrt(std::pow(elt, 2));
+  return std::sqrt(std::pow(elt, 2));
 }
 
 template<typename T>
@@ -21,8 +21,12 @@ int main() {
   // Define a matrix A
   std::vector<int> A(2);
 
+  float ergebnis = 0.;
+
   for (size_t i=0;i<A.size();++i)
     A[i] = 2;
 
-  std::for_each(A.begin(), A.end(), norm_sqrt<int>);
+  std::for_each(A.begin(), A.end(), [&ergebnis](int x) { ergebnis += norm_sqrt<int>(x); });
+
+  std::cout << "||A||2 = " << ergebnis;
 }
