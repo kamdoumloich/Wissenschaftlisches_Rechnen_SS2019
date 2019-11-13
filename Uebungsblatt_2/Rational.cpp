@@ -27,11 +27,11 @@ Rational::Rational(int zaehler_, int nenner_){
 Rational::~Rational(){
 }
 
-int Rational::numerator(){
+int Rational::numerator() const{
 	return zaehler;
 }
 
-int Rational::denominator(){
+int Rational::denominator() const{
 	return nenner;
 }
 
@@ -84,8 +84,8 @@ Rational operator/(const Rational &rational_links, const Rational &rational_rech
 }
 
 bool operator==(const Rational &rational_links, const Rational &rational_rechts){
-	return ((rational_links.zaehler == rational_rechts.zaehler)
-			&& (rational_links.nenner == rational_rechts.nenner));
+	return ((rational_links.numerator() == rational_rechts.numerator()) 
+	&& (rational_links.denominator() == rational_rechts.denominator()));
 }
 
 bool operator!=(const Rational &rational_links, const Rational &rational_rechts){
@@ -101,13 +101,13 @@ bool operator>=(const Rational &rational_links, const Rational &rational_rechts)
 }
 
 bool operator<(const Rational &rational_links, const Rational &rational_rechts){
-	int links =  rational_links.zaehler*rational_rechts.nenner;
-	int rechts =  rational_links.nenner*rational_rechts.zaehler;
+	int links = rational_links.numerator() * rational_rechts.denominator();
+	int rechts = rational_links.denominator() * rational_rechts.numerator();
 	return (links < rechts);
 }
 
 bool operator>(const Rational &rational_links, const Rational &rational_rechts){
-	int links =  rational_links.zaehler*rational_rechts.nenner;
-	int rechts =  rational_links.nenner*rational_rechts.zaehler;
+	int links = rational_links.numerator() * rational_rechts.denominator();
+	int rechts = rational_links.denominator() * rational_rechts.numerator();
 	return (links > rechts);
 }

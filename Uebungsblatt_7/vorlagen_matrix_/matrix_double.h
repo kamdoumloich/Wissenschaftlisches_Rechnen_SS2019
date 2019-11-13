@@ -4,6 +4,7 @@
  * Matrix Class representing matrices of double values
  */
 
+// template <typename T> ist gleich
 template <class T>
 class MatrixClass
 {

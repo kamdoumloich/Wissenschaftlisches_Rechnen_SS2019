@@ -22,8 +22,8 @@ public:
 	virtual~ Rational();
 
 	//Methoden
-	int numerator();
-	int denominator();
+	int numerator() const;
+	int denominator() const;
 	void print();
 
 	//Operatoren
@@ -33,26 +33,25 @@ public:
 	Rational &operator/=(const Rational &);
 
 
-	//Vergleichsoperatoren
-	friend bool operator==(const Rational &, const Rational &);
-	friend bool operator!=(const Rational &, const Rational &);
-	friend bool operator<=(const Rational &, const Rational &);
-	friend bool operator>=(const Rational &, const Rational &);
-	friend bool operator<(const Rational &, const Rational &);
-	friend bool operator>(const Rational &, const Rational &);
-
-	//Operatoren
-	friend Rational operator*(const Rational &, const Rational &);
-	friend Rational operator+(const Rational &, const Rational &);
-	friend Rational operator-(const Rational &, const Rational &);
-	friend Rational operator/(const Rational &, const Rational &);
-
+	
 private:
 	int zaehler;
 	int nenner;
 
 };
 
+//Vergleichsoperatoren
+bool operator==(const Rational &, const Rational &);
+bool operator!=(const Rational &, const Rational &);
+bool operator<=(const Rational &, const Rational &);
+bool operator>=(const Rational &, const Rational &);
+bool operator<(const Rational &, const Rational &);
+bool operator>(const Rational &, const Rational &);
 
+//Operatoren
+Rational operator*(const Rational &, const Rational &);
+Rational operator+(const Rational &, const Rational &);
+Rational operator-(const Rational &, const Rational &);
+Rational operator/(const Rational &, const Rational &);
 
 #endif /* RATIONAL_H_ */

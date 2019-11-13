@@ -69,6 +69,7 @@ void List::insert (Node *n, int i)
     Node *prev_node = first_;
     Node *tmp;
 
+    // Kann mehr einfacher gemacht werden
     if (current_node != n)
     {
         while(current_node != n)
